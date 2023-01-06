@@ -36,6 +36,9 @@ def get_wiki(request, name):
             name) is None else util.get_entry(name)
     markdowner = Markdown()
     entry = markdowner.convert(entry)
+    # Check if the entry exists in the entries if not then no edit button should be displayed
+    if util.get_entry(name) is not None:
+        entry += f'<br><a class="btn btn-primary btn-sm" href="{name}/edit">Edit entry</a>'
     return render(request, "encyclopedia/get_wiki.html", {
         "entry": entry,
         "name": name

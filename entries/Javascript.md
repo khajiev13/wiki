@@ -1,0 +1,1 @@
+It's a programming language that is used for adding functionalities to a website. It is usually used for front end and some developers use it for backend too.

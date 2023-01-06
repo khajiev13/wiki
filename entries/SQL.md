@@ -1,0 +1,1 @@
+SQL is a query language
